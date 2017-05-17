@@ -1,0 +1,143 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Camera = MainCamera
+  Caption = 'Form1'
+  Color = claTan
+  ClientHeight = 670
+  ClientWidth = 922
+  UsingDesignCamera = False
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnMouseDown = Form3DMouseDown
+  OnMouseMove = Form3DMouseMove
+  OnMouseWheel = Form3DMouseWheel
+  DesignerMasterStyle = 0
+  object Layer3D1: TLayer3D
+    Align = Right
+    Height = 670.000000000000000000
+    Position.X = 828.000000000000000000
+    Position.Y = 335.000000000000000000
+    Projection = Screen
+    Resolution = 50
+    StyleLookup = 'backgroundstyle'
+    Width = 188.000000000000000000
+    object Button1: TButton
+      Position.X = 7.000000000000000000
+      Position.Y = 528.000000000000000000
+      Size.Width = 174.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Cube Create'
+      OnClick = Button1Click
+    end
+    object ListView1: TListView
+      ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+      ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 329.000000000000000000
+      Size.PlatformDefault = False
+      ItemAppearanceObjects.ItemObjects.Accessory.AccessoryType = Detail
+      ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    end
+    object RadioButton1: TRadioButton
+      Position.X = 8.000000000000000000
+      Position.Y = 352.000000000000000000
+      Text = 'Cube'
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Text = '0'
+      Position.X = 11.000000000000000000
+      Position.Y = 416.000000000000000000
+    end
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Text = '0'
+      Position.X = 11.000000000000000000
+      Position.Y = 456.000000000000000000
+    end
+    object Edit3: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Text = '0'
+      Position.X = 11.000000000000000000
+      Position.Y = 496.000000000000000000
+    end
+    object Label1: TLabel
+      Position.X = 11.000000000000000000
+      Position.Y = 400.000000000000000000
+      Text = 'X'
+    end
+    object Label2: TLabel
+      Position.X = 11.000000000000000000
+      Position.Y = 440.000000000000000000
+      Text = 'Y'
+    end
+    object Label3: TLabel
+      Position.X = 11.000000000000000000
+      Position.Y = 480.000000000000000000
+      Text = 'Z'
+    end
+    object Button2: TButton
+      Position.X = 7.000000000000000000
+      Position.Y = 555.000000000000000000
+      Size.Width = 174.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Reset Camera Angle'
+      OnClick = Button2Click
+    end
+  end
+  object DummyXY: TDummy
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    object MainCamera: TCamera
+      AngleOfView = 45.000000000000000000
+      Position.Z = -10.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object Light1: TLight
+        Color = claWhite
+        LightType = Directional
+        SpotCutOff = 180.000000000000000000
+        Position.X = -3.764025688171387000
+        Position.Y = -1.338737487792969000
+        RotationAngle.X = 353.849426269531300000
+        RotationAngle.Y = 348.395172119140600000
+        RotationAngle.Z = 354.054077148437500000
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        Quanternion = 
+          '(0.0679663494229317,-0.139877066016197,0.0305466391146183,-0.987' +
+          '361311912537)'
+      end
+    end
+  end
+  object WallSource: TLightMaterialSource
+    Diffuse = claOrangered
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 160
+    Top = 224
+  end
+  object TextLayer3D1: TTextLayer3D
+    Color = claBlack
+    Height = 20.000000000000000000
+    Position.X = 122.000000000000000000
+    Position.Y = 12.000000000000000000
+    Projection = Screen
+    Resolution = 50
+    Text = 'Now mouse Event Type :  Dummy XY Type'
+    Width = 244.000000000000000000
+  end
+end
